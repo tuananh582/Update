@@ -66,8 +66,8 @@ button.active {
 }
 
 .clear-button {
-  display: block;
-  margin: 0 auto;
+  /* display: block;
+  margin: 0 auto; */
   padding: 5px 10px;
   background-color: #f44336;
   color: white;

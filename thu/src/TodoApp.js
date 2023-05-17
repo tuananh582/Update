@@ -61,6 +61,29 @@ const TodoApp = () =>  {
   return (
     <div className="App">
       <h1>Todo App</h1>
+      <div className="filter-container">
+        <button
+          className={filter === 'all' ? 'active' : ''}
+          onClick={() => setFilter('all')}
+        >
+          All
+        </button>
+        <button
+          className={filter === 'active' ? 'active' : ''}
+          onClick={() => setFilter('active')}
+        >
+          Active
+        </button>
+        <button
+          className={filter === 'completed' ? 'active' : ''}
+          onClick={() => setFilter('completed')}
+        >
+          Completed
+        </button>
+        <button className="clear-button" onClick={() => setTasks([])}>
+        Clear All
+      </button>
+      </div>
       <div className="input-container">
         <input
           type="text"
@@ -69,7 +92,11 @@ const TodoApp = () =>  {
           onChange={(e) => setCurrentTask(e.target.value)}
         />
         <button onClick={addTask}>Add Task</button>
+        
+      
       </div>
+     
+
 
       <div className="tasks-container">
         <ul>
@@ -87,7 +114,7 @@ const TodoApp = () =>  {
         </ul>
       </div>
 
-      <div className="filter-container">
+      {/* <div className="filter-container">
         <button
           className={filter === 'all' ? 'active' : ''}
           onClick={() => setFilter('all')}
@@ -110,7 +137,7 @@ const TodoApp = () =>  {
 
       <button className="clear-button" onClick={() => setTasks([])}>
         Clear All
-      </button>
+      </button> */}
     </div>
   );
 }
